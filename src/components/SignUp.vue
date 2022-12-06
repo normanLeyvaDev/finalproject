@@ -1,6 +1,5 @@
 <template>
   <div class="container">
-
     <div class="header">
       <div class="header-description">
         <h3 class="header-title">Register to ToDo App</h3>
@@ -44,18 +43,18 @@
           />
         </div>
         <button class="button" type="submit">Sign Up</button>
-        <p>
+        <div class="haveAccount">
           Have an account?
           <PersonalRouter
             :route="route"
             :buttonText="buttonText"
             class="sign-up-link"
           />
-        </p>
+        </div>
       </div>
     </form>
 
-    <div v-show="errorMsg">{{errorMsg}}</div>
+    <div v-show="errorMsg">{{ errorMsg }}</div>
   </div>
 </template>
 

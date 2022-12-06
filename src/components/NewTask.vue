@@ -17,8 +17,8 @@
         placeholder="Add a Task Description - Look up Kendrick Lamar's FEAR album on spotify and listen to the whole album."
         v-model="description"
       />
+      <button @click="addTask" class="button">Add</button>
     </div>
-    <button @click="addTask" class="button">Add</button>
   </div>
 </template>
 
