@@ -49,20 +49,17 @@ const userEmail = getUser.email;
 // async function that calls the signOut method from the useUserStore and pushes the user back to the Auth view.
 const redirect = useRouter();
 
-const signOut = async () => {
-  try {
-    // call the user store and send the users info to backend to signOut
-    // then redirect user to the homeView
-  } catch (error) {}
-};
-</script>
-
-<style>
-.navbar-img {
-  width: 90px;
+async function signOut() {
+  await useUserStore().signOut();
+  redirect.push({ path: "/auth/login" });
 }
+</script>
+<style>
+/* .navbar-img {
+  width: 90px;
+} */
 
-nav {
+/* nav {
   background-color: lightgray;
   display: flex;
   width: 100%;
@@ -76,5 +73,5 @@ nav ul {
   display: flex;
   flex-direction: column;
   align-items: center;
-}
+} */
 </style>

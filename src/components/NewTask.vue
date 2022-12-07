@@ -37,23 +37,26 @@ const showErrorMessage = ref(false);
 
 // const constant to save a variable that holds the value of the error message
 const errorMessage = ref(null);
+const emit = defineEmits(["getTasks"]);
 
 // Arrow function para crear tareas.
-const addTask = () => {
+const addTask = async () => {
   if (name.value.length === 0 || description.value.length === 0) {
     // Primero comprobamos que ningún campo del input esté vacío y lanzamos el error con un timeout para informar al user.
 
     showErrorMessage.value = true;
     errorMessage.value = "The task title or description is empty";
+
     setTimeout(() => {
       showErrorMessage.value = false;
     }, 5000);
   } else {
     // Aquí mandamos los valores a la store para crear la nueva Task. Esta parte de la función tenéis que refactorizarla para que funcione con emit y el addTask del store se llame desde Home.vue.
     // llamamos a adtask y le pasamos los parametros de name y description
-    taskStore.addTask(name.value, description.value);
+    await taskStore.addTask(name.value, description.value);
     name.value = "";
     description.value = "";
+    emit("getTasks");
   }
 };
 </script>

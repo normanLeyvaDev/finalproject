@@ -53,18 +53,28 @@ export const useUserStore = defineStore("user", {
       if (error) throw error;
       if (user) {
         this.user = user;
-        /* const { data: profile } = await supabase
-        .from('profiles')
-        .select()
-        .match({ user_id: this.user.id })
+        const { data: profile } = await supabase
+          .from("profiles")
+          .select()
+          .match({ user_id: this.user.id });
 
         if (profile) this.profile = profile[0];
-        console.log('profile in store: ', profile); */
+        console.log("profile in store: ", profile);
       }
     },
 
-    async signOut() {
-      const { error } = await supabase.auth.signOut();
+    async signOut(getUser) {
+      console.log("saliendo");
+      console.log(getUser);
+      const { error } = await supabase.auth.signOut(
+        {
+          email: null,
+          password: null,
+        },
+        {
+          shouldCreateUser: false,
+        }
+      );
       if (error) throw error;
     },
   },

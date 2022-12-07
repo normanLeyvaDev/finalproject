@@ -6,9 +6,14 @@
       <h3>Your account:</h3>
       <router-link to="/account">Account</router-link>
     </div>
-    <NewTask />
+    <NewTask @getTasks="getTasks" />
     <h1>Tasks:</h1>
-    <TaskItem v-for="task in tasks" :key="task.id" :task="task" />
+    <TaskItem
+      @deleteTask="deleteTask"
+      v-for="task in tasks"
+      :key="task.id"
+      :task="task"
+    />
   </div>
 </template>
 <!-- creamos un task item por cada tarea que tengamos en el array tareas. -->
@@ -32,6 +37,12 @@ const getTasks = async () => {
 };
 
 getTasks();
+
+const deleteTask = async () => {
+  tasks.value = await taskStore.fetchTasks();
+};
+
+deleteTask();
 </script>
 
 <style></style>
