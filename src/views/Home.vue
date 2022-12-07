@@ -10,6 +10,7 @@
     <h1>Tasks:</h1>
     <TaskItem
       @deleteTask="deleteTask"
+      @toogleTask="toogleTask"
       v-for="task in tasks"
       :key="task.id"
       :task="task"
@@ -43,6 +44,13 @@ const deleteTask = async () => {
 };
 
 deleteTask();
+
+// toogle
+const toogleTask = async () => {
+  tasks.value = await taskStore.fetchTasks();
+};
+
+toogleTask();
 </script>
 
 <style></style>

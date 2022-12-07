@@ -33,5 +33,16 @@ export const useTaskStore = defineStore("tasks", {
         id: id,
       });
     },
+    // toogle
+    async toogleTask(id) {
+      const { data, error } = await supabase
+        .from("tasks")
+        .update({
+          is_complete: (this.is_complete = this.is_complete ? false : true),
+        })
+        .match({
+          id: id,
+        });
+    },
   },
 });
