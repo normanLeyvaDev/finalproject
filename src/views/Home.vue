@@ -11,6 +11,7 @@
     <TaskItem
       @deleteTask="deleteTask"
       @toogleTask="toogleTask"
+      @getTasks="getTasks"
       v-for="task in tasks"
       :key="task.id"
       :task="task"

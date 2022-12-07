@@ -44,5 +44,18 @@ export const useTaskStore = defineStore("tasks", {
           id: id,
         });
     },
+    async refreshTask(title, description, id) {
+      const { data, error } = await supabase
+        .from("tasks")
+        .update([
+          {
+            title: title,
+            description: description,
+          },
+        ])
+        .match({
+          id: id,
+        });
+    },
   },
 });

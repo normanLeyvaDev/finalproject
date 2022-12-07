@@ -7,7 +7,7 @@
       </div>
     </div>
 
-    <form @submit.prevent="signUp" class="form-sign-in">
+    <form @submit.prevent="signUp" class="form-sign-up">
       <div class="form">
         <div class="form-input">
           <label class="input-field-label">E-mail</label>
