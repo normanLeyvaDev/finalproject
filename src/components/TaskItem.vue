@@ -9,7 +9,7 @@
       <button @click="updateTask">Save</button>
     </div>
     <button @click="deleteTask">Delete {{ task.title }}</button>
-    <button @click="toogleTask">Toogle {{ task.is_complete }}</button>
+    <input type="checkbox" v-model="task.is_complete" @click="toogleTask" />
     <button @click="changeEdit" class="button">Edit</button>
   </div>
 </template>
