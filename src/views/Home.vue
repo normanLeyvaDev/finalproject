@@ -1,5 +1,5 @@
 <template>
-  <div class="wrapper">
+  <div class="">
     <Nav />
 
     <div class="content">
@@ -7,7 +7,7 @@
       <router-link to="/account">Account</router-link>
     </div>
     <NewTask @getTasks="getTasks" />
-    <h1>Tasks:</h1>
+    <h2 class="titulo-tasks-contenedor">Here your taks list:</h2>
     <TaskItem
       @deleteTask="deleteTask"
       @toogleTask="toogleTask"
@@ -17,6 +17,7 @@
       :task="task"
     />
   </div>
+  <footer />
 </template>
 <!-- creamos un task item por cada tarea que tengamos en el array tareas. -->
 
@@ -27,6 +28,7 @@ import { useRouter } from "vue-router";
 import Nav from "../components/Nav.vue";
 import NewTask from "../components/NewTask.vue";
 import TaskItem from "../components/TaskItem.vue";
+import footer from "../components/footer.vue";
 
 const taskStore = useTaskStore();
 

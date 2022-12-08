@@ -2,7 +2,7 @@
   <nav>
     <!-- <PersonalRouter :route="route" :buttonText="buttonText" class="logo-link"/> -->
 
-    <ul>
+    <ul class="barra-nav-izq">
       <li>
         <router-link to="/">Home</router-link>
       </li>
@@ -16,12 +16,12 @@
     </ul>
 
     <div>
-      <ul>
+      <ul class="barra-nav-der">
         <li class="log-out-welcome">
           <p>Welcome, user</p>
         </li>
         <li>
-          <button @click="signOut" class="button">Log out</button>
+          <button @click="signOut" class="button-logout">Log out</button>
         </li>
       </ul>
     </div>
