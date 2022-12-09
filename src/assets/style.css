@@ -380,7 +380,7 @@ input {
 }
 
 .contenedor-todos-tasks {
-  padding: 1rem 7rem;
+  /* padding: 1rem 7rem; */
 }
 
 .container-tasks {
@@ -432,7 +432,7 @@ input {
   height: 1.5rem;
   border-radius: 0.5rem;
   margin: 1rem 1rem;
-  padding: 2rem 4rem;
+  padding: 2rem 2rem;
   box-shadow: 0 0 15px rgb(18, 18, 18);
 }
 
@@ -449,7 +449,7 @@ input {
   height: 1.5rem;
   border-radius: 0.5rem;
   margin: 1rem 1rem;
-  padding: 2rem 4rem;
+  padding: 2rem 2rem;
   box-shadow: 0 0 15px rgb(18, 18, 18);
 }
 
@@ -496,6 +496,19 @@ footer {
   margin: 6rem 2.5rem;
 }
 
+.container-tasks {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  align-content: center;
+  padding: 2rem 5rem;
+  background-color: white;
+  border-radius: 5%;
+  box-shadow: 0 0 15px rgb(18, 18, 18);
+  -webkit-mask-attachment: ;
+}
+
 .container-delete-edit {
   display: flex;
   flex-direction: row;
@@ -531,7 +544,19 @@ footer {
   /* SignIn Component */
 
   /* SignUp Component */
-
+  .container-tasks {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    align-content: center;
+    padding: 2rem 5rem;
+    margin: 2rem 18rem;
+    background-color: white;
+    border-radius: 5%;
+    box-shadow: 0 0 15px rgb(18, 18, 18);
+    -webkit-mask-attachment: ;
+  }
   .contenedor-todo {
     display: flex;
     flex-direction: column;
