@@ -1,3 +1,8 @@
+
+# VERCEL LINK
+[url]vercel-final-project-ji1mej079-nleyvagarcia-gmailcom.vercel.app
+
+
 # LUNES 5 DE DICIEMBRE
 
 Clase de explicación de Pinia y setup de Supabase. Comenzamos con el proyecto final el resto de la jornada. Comenzamos con el CSS de las páginas de SignUp y SignIn.
