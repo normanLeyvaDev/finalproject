@@ -2,14 +2,14 @@
   <nav>
     <!-- <PersonalRouter :route="route" :buttonText="buttonText" class="logo-link"/> -->
     <ul class="barra-nav-izq">
-      <li>
+      <li class="efecto-hover">
         <router-link to="/">Home</router-link>
       </li>
-      <li>
+      <li class="efecto-hover">
         <router-link to="/">Task Manager</router-link>
       </li>
 
-      <li>
+      <li class="efecto-hover">
         <router-link to="/account">Your Account</router-link>
       </li>
     </ul>

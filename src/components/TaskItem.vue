@@ -1,8 +1,17 @@
 <template>
   <div class="contenedor-todos-tasks">
     <div class="container-tasks">
-      <input type="checkbox" v-model="task.is_complete" @click="toogleTask" />
-      <p>{{ task.is_complete ? "Task Completed" : "Task Incompleted" }}</p>
+      <label class="botoncito">
+        <input type="checkbox" v-model="task.is_complete" @click="toogleTask" />
+        <span class="deslizadora"></span> </label
+      ><br />
+      <p>
+        {{
+          task.is_complete
+            ? "Good job! Your task is now Completed! :)"
+            : "Your task is not completed yet :("
+        }}
+      </p>
 
       <div class="container-title-description">
         <h3>{{ task.title }}</h3>

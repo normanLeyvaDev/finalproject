@@ -373,6 +373,75 @@ input {
   text-decoration: none;
 }
 
+/* ESTILOS DEL INTERRUPTOR COMPLETADO-NOCOMPLETADO */
+
+.botoncito {
+  position: relative;
+
+  display: inline-block;
+
+  width: 3.6rem;
+
+  height: 2rem;
+}
+
+.botoncito input {
+  opacity: 0;
+
+  width: 0;
+
+  height: 0;
+}
+
+.deslizadora {
+  position: absolute;
+
+  cursor: pointer;
+
+  top: 0;
+
+  left: 0;
+
+  right: 0;
+
+  bottom: 0;
+
+  background-color: rgb(238, 88, 88);
+
+  transition: 0.4s;
+  border-radius: 10%;
+}
+
+.deslizadora:before {
+  position: absolute;
+
+  content: "";
+
+  height: 1.6rem;
+
+  width: 1.6rem;
+
+  left: 0.2rem;
+
+  bottom: 0.2rem;
+
+  background-color: var(--vivid-sky-blue);
+
+  transition: 0.4s;
+
+  border-radius: 10%;
+}
+
+input:checked + .deslizadora {
+  background-color: #34a853;
+}
+
+input:checked + .deslizadora:before {
+  transform: translateX(1.6rem);
+}
+
+/* FIN DEL ESTILO DEL INTERRUPTOR */
+
 .titulo-tasks-contenedor {
   color: white;
   text-align: center;
@@ -542,11 +611,11 @@ footer {
     display: flex;
   }
 
-  .barra-nav-izq li:hover {
+  .efecto-hover:hover {
     text-decoration: none !important;
     padding: 10px 10px !important;
     margin: 0 7px;
-    color: #ffffff !important;
+    color: #e80707 !important;
     background-color: var(--ultramarine-blue) !important;
     border-radius: 30px !important;
   }
