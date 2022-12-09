@@ -12,4 +12,4 @@ Revisamos el avance con el TA al inicio del dia y luego avanzamos con el proyect
 
 # JUEVES 8 DE DICIEMBRE
 
-Revisamos avances con el TA al inicio del dia y luego me pongo con el CSS.
+Revisamos avances con el TA al inicio del dia y luego me pongo con el CSS. Lo dejo casi finalizado.
