@@ -1,7 +1,5 @@
 <template>
-  <footer>
-    <h3>esto es el footer</h3>
-  </footer>
+  <footer></footer>
 </template>
 
 <script setup>

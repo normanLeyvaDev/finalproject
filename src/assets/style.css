@@ -164,20 +164,87 @@ nav {
   justify-content: space-between;
   align-items: center;
   background-color: var(--trypan-blue);
-  border-radius: 0.5rem;
-  padding: 2rem 0;
+  border-bottom-left-radius: 1rem;
+  border-bottom-right-radius: 1rem;
   line-height: 1.8rem;
   padding: 0 2rem;
-  box-shadow: 0 0 15px rgb(18, 18, 18);
 }
 
 .barra-nav-izq {
   list-style: none;
-  display: flex;
+  display: none;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
   padding: 0;
+}
+
+/* MENU HAMBUGUESA */
+
+.slide li {
+  list-style: none;
+}
+
+.nav-izquierdo-movil {
+  width: 50%;
+}
+
+.nav-izquierdo-movil li a {
+  text-decoration: none;
+  color: white;
+}
+
+.nav-izquierdo-movil nav {
+  display: flex;
+  background: #3a0ca3ff;
+  margin: 20px auto;
+  padding: 0;
+}
+
+.nav-izquierdo-movil span {
+  margin: 0;
+  padding: 0.5rem;
+  background: #15033f;
+  color: #f72585;
+  font-size: 1.2em;
+  font-variant: small-caps;
+  cursor: pointer;
+  display: block;
+}
+
+.nav-izquierdo-movil span::after {
+  float: right;
+  right: 10%;
+}
+
+.slide {
+  clear: both;
+  width: 80%;
+  height: 0px;
+  overflow: hidden;
+  text-align: center;
+  transition: height 0.4s ease;
+}
+
+.slide li {
+  padding: 1rem;
+  margin: 1rem;
+}
+
+#touch {
+  position: absolute;
+  opacity: 2;
+  height: 0px;
+}
+
+#touch:checked + .slide {
+  width: 20rem;
+  height: 20rem;
+}
+/* FIN MENU HAMBURGUESA */
+
+input:checked ~ ul {
+  display: block;
 }
 
 .barra-nav-izq li {
@@ -212,7 +279,8 @@ nav p {
 }
 
 .log-out-welcome {
-  font-size: 25px;
+  text-align: center;
+  font-size: 19px;
   padding: 0;
 }
 
@@ -237,7 +305,6 @@ nav button {
   font-display: flex;
   flex-direction: column;
   justify-content: center;
-  margin: 1rem 10rem;
   border-radius: 40%;
 }
 
@@ -277,6 +344,7 @@ input {
 }
 
 .titulo-nueva-task {
+  font-size: 1.5rem;
   color: white;
   text-align: center;
   padding: 2rem;
@@ -293,14 +361,16 @@ input {
   background-color: #f72585;
   padding: 1rem;
   margin: 0.5rem 0rem;
-  border-radius: 0.5rem;
+  border-bottom-left-radius: 1rem;
+  border-bottom-right-radius: 1rem;
   box-shadow: 0 0 15px rgb(18, 18, 18);
 }
 
 .content h3 {
   margin: 0;
+  font-size: 2rem;
   font-family: "Roboto", sans-serif;
-  font-weight: 900;
+  color: white;
 }
 
 .content a {
@@ -314,18 +384,20 @@ input {
   font-size: 2rem;
 }
 
+.contenedor-todos-tasks {
+  flex-direction: row;
+}
+
 .container-tasks {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
   align-content: center;
-  padding: 2rem 2rem;
+  padding: 2rem 5rem;
   background-color: white;
   border-radius: 5%;
   box-shadow: 0 0 15px rgb(18, 18, 18);
-  width: 30%;
-  height: 30%;
   -webkit-mask-attachment: ;
   margin: 1rem 1rem;
 }
@@ -344,7 +416,7 @@ input {
 
 .container-delete-edit {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   align-items: center;
   align-content: center;
   justify-content: space-between;
@@ -405,7 +477,8 @@ input {
 }
 
 footer {
-  background-color: white;
+  padding: 3rem;
+  position: absolute;
 }
 
 /* Account View */
@@ -422,6 +495,8 @@ footer {
   }
 }
 
+/* Sig
+
 /* SignIn Component */
 
 /* SignUp Component */
@@ -434,7 +509,13 @@ footer {
   body {
     background-color: rgb(255, 255, 255);
   }
+  .nav-izquierdo-movil {
+    display: none;
+  }
 
+  .barra-nav-izq {
+    display: flex;
+  }
   /* SignIn Component */
 
   /* SignUp Component */

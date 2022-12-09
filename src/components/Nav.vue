@@ -1,7 +1,6 @@
 <template>
   <nav>
     <!-- <PersonalRouter :route="route" :buttonText="buttonText" class="logo-link"/> -->
-
     <ul class="barra-nav-izq">
       <li>
         <router-link to="/">Home</router-link>
@@ -14,6 +13,21 @@
         <router-link to="/account">Your Account</router-link>
       </li>
     </ul>
+
+    <!-- INICIO VERSION DE NAV PARA MOVIL -->
+    <div class="nav-izquierdo-movil">
+      <nav>
+        <label for="touch"><span>☰</span></label>
+        <input type="checkbox" id="touch" />
+
+        <ul class="slide">
+          <li><a href="/">Home</a></li>
+          <li><a href="/">Task Manager</a></li>
+          <li><a href="/account">Your Account</a></li>
+        </ul>
+      </nav>
+      <!-- FIN VERSION DE NAV PARA MOVIL -->
+    </div>
 
     <div>
       <ul class="barra-nav-der">

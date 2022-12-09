@@ -1,22 +1,24 @@
 <template>
-  <div class="container-tasks">
-    <input type="checkbox" v-model="task.is_complete" @click="toogleTask" />
-    <p>{{ task.is_complete }}</p>
+  <div class="contenedor-todos-tasks">
+    <div class="container-tasks">
+      <input type="checkbox" v-model="task.is_complete" @click="toogleTask" />
+      <p>{{ task.is_complete ? "Task Completed" : "Task Incompleted" }}</p>
 
-    <div class="container-title-description">
-      <h3>{{ task.title }}</h3>
-      <p>{{ task.description }}</p>
-    </div>
+      <div class="container-title-description">
+        <h3>{{ task.title }}</h3>
+        <p>{{ task.description }}</p>
+      </div>
 
-    <div v-show="editTask">
-      <input type="text" placeholder="Title" v-model="name" />
-      <input type="text" placeholder="Description" v-model="description" />
-      <button @click="updateTask">Save</button>
-    </div>
+      <div v-show="editTask">
+        <input type="text" placeholder="Title" v-model="name" />
+        <input type="text" placeholder="Description" v-model="description" />
+        <button @click="updateTask">Save</button>
+      </div>
 
-    <div class="container-delete-edit">
-      <button @click="deleteTask" class="buttonDelete">Delete Task</button>
-      <button @click="changeEdit" class="buttonEdit">Edit task</button>
+      <div class="container-delete-edit">
+        <button @click="deleteTask" class="buttonDelete">Delete Task</button>
+        <button @click="changeEdit" class="buttonEdit">Edit task</button>
+      </div>
     </div>
   </div>
 </template>
@@ -59,6 +61,15 @@ const toogleTask = async () => {
   await taskStore.toogleTask(props.task.id);
   emit("toogleTask");
 };
+
+// let status = ref(task.is_complete ? "Task Completed" : "Task Incompleted");
+
+// let result = ref("");
+
+// const statusFunction = () => {
+//   task.is_complete ? "Task Completed" : "Task Incompleted";
+//   return result;
+// };
 </script>
 
 <style></style>

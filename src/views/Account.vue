@@ -13,33 +13,28 @@
 
 <script setup>
 import { supabase } from "../supabase";
-import { onMounted, ref, toRefs } from "vue";
-import { useUserStore } from "../stores/user";
+import { onMounted, reactive, ref, toRefs } from "vue";
+import { useProfilesStore } from "../stores/profiles";
 import Nav from "../components/Nav.vue";
+import { useUserStore } from "../stores/user";
 
-const userStore = useUserStore();
+const profileStore = useProfilesStore();
+
+// Variable para guardar el perfil de supabase
+const profile = ref({});
+const username = ref(null);
+const avatar_url = ref(null);
+
+// PREFILE
+const getProfile = async () => {
+  profile.value = await profileStore.fetchProfile();
+  username.value = profile.value.username;
+};
+getProfile();
 
 onMounted(() => {
-  getProfile();
+  //getProfile();
 });
-
-async function getProfile() {
-  await userStore.fetchUser();
-  username.value = userStore.profile.username;
-  avatar_url.value = userStore.profile.avatar_url;
-}
-
-async function signOut() {
-  try {
-    loading.value = true;
-    let { error } = await supabase.auth.signOut();
-    if (error) throw error;
-  } catch (error) {
-    alert(error.message);
-  } finally {
-    loading.value = false;
-  }
-}
 </script>
 
 <style>
