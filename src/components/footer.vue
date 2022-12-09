@@ -4,6 +4,7 @@
 
 <script setup>
 import { ref } from "vue";
+//Minor changes
 </script>
 
 <style></style>
