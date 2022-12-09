@@ -541,6 +541,15 @@ footer {
   .barra-nav-izq {
     display: flex;
   }
+
+  .barra-nav-izq li:hover {
+    text-decoration: none !important;
+    padding: 10px 10px !important;
+    margin: 0 7px;
+    color: #ffffff !important;
+    background-color: var(--ultramarine-blue) !important;
+    border-radius: 30px !important;
+  }
   /* SignIn Component */
 
   /* SignUp Component */
