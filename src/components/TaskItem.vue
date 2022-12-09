@@ -62,12 +62,14 @@ const updateTask = async () => {
 
 const deleteTask = async () => {
   await taskStore.deleteTask(props.task.id);
+  emptyTrashSound();
   emit("deleteTask");
 };
 
 //toogle
 const toogleTask = async () => {
   await taskStore.toogleTask(props.task.id);
+  clickSound();
   emit("toogleTask");
 };
 
@@ -79,6 +81,9 @@ const toogleTask = async () => {
 //   task.is_complete ? "Task Completed" : "Task Incompleted";
 //   return result;
 // };
+let clickSound = () => new Audio("src/sound/clicksoundeffect.mp3").play();
+let emptyTrashSound = () =>
+  new Audio("src/sound/Empty-trash-sound-effect.mp3").play();
 </script>
 
 <style></style>

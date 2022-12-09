@@ -34,9 +34,11 @@ const showErrorMessage = ref(false);
 // const constant to save a variable that holds the value of the error message
 const errorMessage = ref(null);
 const emit = defineEmits(["getTasks"]);
+let addTaskSound = () => new Audio("src/sound/interface.mp3").play();
 
 // Arrow function para crear tareas.
 const addTask = async () => {
+  addTaskSound();
   if (name.value.length === 0 || description.value.length === 0) {
     // Primero comprobamos que ningún campo del input esté vacío y lanzamos el error con un timeout para informar al user.
 
