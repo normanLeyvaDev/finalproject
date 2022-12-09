@@ -70,6 +70,20 @@ async function signOut() {
 }
 
 let clickSound = () => new Audio("src/sound/clicksoundeffect.mp3").play();
+
+/*
+<template>
+  <footer><h3 class="footer-text">Task Creator</h3></footer>
+</template>
+
+<script setup>
+import { ref } from "vue";
+//Minor changes
+</script>
+
+<style></style>
+
+*/
 </script>
 <style>
 /* .navbar-img {
