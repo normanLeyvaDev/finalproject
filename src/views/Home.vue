@@ -18,9 +18,7 @@
     />
   </div>
 
-  <div>
-    <Footer />
-  </div>
+  <div></div>
 </template>
 <!-- creamos un task item por cada tarea que tengamos en el array tareas. -->
 
@@ -31,7 +29,7 @@ import { useRouter } from "vue-router";
 import Nav from "../components/Nav.vue";
 import NewTask from "../components/NewTask.vue";
 import TaskItem from "../components/TaskItem.vue";
-//import Footer from "../components/Footer.vue";
+//import footer from "../components/footer.vue";
 
 const taskStore = useTaskStore();
 
