@@ -117,11 +117,13 @@ body {
   flex-direction: column;
   align-items: center;
   text-align: center;
-  border: black 1rem;
   padding: 1rem 7rem;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.12), 0 2px 2px rgba(0, 0, 0, 0.12),
+    0 4px 4px rgba(0, 0, 0, 0.12), 0 8px 8px rgba(0, 0, 0, 0.12),
+    0 16px 16px rgba(0, 0, 0, 0.12);
 }
 
-.input-field-label input {
+.input-field-label {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -539,7 +541,7 @@ footer {
     justify-content: space-around;
     align-items: center;
     align-content: center;
-    margin: 7rem 5rem;
+    margin: 5rem 5rem;
   }
 
   .container {
