@@ -1,3 +1,33 @@
+<script setup>
+// import PersonalRouter from "./PersonalRouter.vue";
+import { useUserStore } from "../stores/user";
+import { computed } from "vue";
+import { useRouter } from "vue-router";
+import { ref } from "vue";
+
+//constant to save a variable that will hold the use router method
+const route = "/";
+const buttonText = "Todo app";
+
+// constant to save a variable that will get the user from store with a computed function imported from vue
+// const getUser = computed(() => useUserStore().user);
+const getUser = useUserStore().user;
+
+// constant that calls user email from the useUSerStore
+const userEmail = getUser.email;
+
+// async function that calls the signOut method from the useUserStore and pushes the user back to the Auth view.
+const redirect = useRouter();
+
+async function signOut() {
+  await useUserStore().signOut();
+  clickSound();
+  redirect.push({ path: "/auth/login" });
+}
+
+let clickSound = () => new Audio("src/sound/clicksoundeffect.mp3").play();
+</script>
+
 <template>
   <nav>
     <!-- <PersonalRouter :route="route" :buttonText="buttonText" class="logo-link"/> -->
@@ -42,67 +72,4 @@
   </nav>
 </template>
 
-<script setup>
-// import PersonalRouter from "./PersonalRouter.vue";
-import { useUserStore } from "../stores/user";
-import { computed } from "vue";
-import { useRouter } from "vue-router";
-import { ref } from "vue";
-
-//constant to save a variable that will hold the use router method
-const route = "/";
-const buttonText = "Todo app";
-
-// constant to save a variable that will get the user from store with a computed function imported from vue
-// const getUser = computed(() => useUserStore().user);
-const getUser = useUserStore().user;
-
-// constant that calls user email from the useUSerStore
-const userEmail = getUser.email;
-
-// async function that calls the signOut method from the useUserStore and pushes the user back to the Auth view.
-const redirect = useRouter();
-
-async function signOut() {
-  await useUserStore().signOut();
-  clickSound();
-  redirect.push({ path: "/auth/login" });
-}
-
-let clickSound = () => new Audio("src/sound/clicksoundeffect.mp3").play();
-
-/*
-<template>
-  <footer><h3 class="footer-text">Task Creator</h3></footer>
-</template>
-
-<script setup>
-import { ref } from "vue";
-//Minor changes
-</script>
-
 <style></style>
-
-*/
-</script>
-<style>
-/* .navbar-img {
-  width: 90px;
-} */
-
-/* nav {
-  background-color: lightgray;
-  display: flex;
-  width: 100%;
-  justify-content: space-around;
-  align-items: center;
-}
-
-nav ul {
-  list-style: none;
-  padding-inline-start: 0;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-} */
-</style>
