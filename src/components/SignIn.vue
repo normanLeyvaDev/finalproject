@@ -34,7 +34,15 @@
             />
           </div>
 
-          <button class="button" type="submit">Sign In</button>
+          <div id="container">
+            <button class="button" @click="click2()">
+              <span class="circle" aria-hidden="true">
+                <span class="icon arrow"></span>
+              </span>
+              <span class="button-text">Sign In</span>
+            </button>
+          </div>
+
           <div class="haveAccount">
             Don't have an account?
             <PersonalRouter
@@ -75,6 +83,7 @@ async function signIn() {
   redirect.push({ path: "/" });
 }
 
+let click2 = () => new Audio("src/sound/click2.mp3").play();
 /*
 const signIn = async () => {
   try {

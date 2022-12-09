@@ -5,15 +5,21 @@
   </div>
   <div class="nueva-task">
     <div class="input-field">
-      <input type="text" placeholder="Add a your task here" v-model="name" />
+      <input
+        type="text"
+        placeholder="Add a your task here"
+        v-model="name"
+        @click="click2()"
+      />
     </div>
     <div class="input-field">
       <input
         type="text"
         placeholder="Add a description here"
         v-model="description"
+        @click="click2()"
       />
-      <button @click="addTask" class="buttonAddTask">Add</button>
+      <button @click="addTask" class="buttonAddTask">Click me</button>
     </div>
   </div>
 </template>
@@ -57,6 +63,8 @@ const addTask = async () => {
     emit("getTasks");
   }
 };
+
+let click2 = () => new Audio("src/sound/click2.mp3").play();
 </script>
 
 <style></style>

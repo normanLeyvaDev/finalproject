@@ -17,7 +17,7 @@
     <!-- INICIO VERSION DE NAV PARA MOVIL -->
     <div class="nav-izquierdo-movil">
       <nav>
-        <label for="touch"><span>☰</span></label>
+        <label for="touch"><span @click="clickSound()">☰</span></label>
         <input type="checkbox" id="touch" />
 
         <ul class="slide">
@@ -65,8 +65,11 @@ const redirect = useRouter();
 
 async function signOut() {
   await useUserStore().signOut();
+  clickSound();
   redirect.push({ path: "/auth/login" });
 }
+
+let clickSound = () => new Audio("src/sound/clicksoundeffect.mp3").play();
 </script>
 <style>
 /* .navbar-img {

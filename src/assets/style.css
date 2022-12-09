@@ -107,6 +107,10 @@ body {
     0 16px 16px rgba(0, 0, 0, 0.12);
 }
 
+/* form button css */
+
+/* fin form button css */
+
 .input-field {
   display: flex;
   flex-direction: column;
@@ -536,7 +540,7 @@ input:checked + .deslizadora:before {
   height: 1.5rem;
   border-radius: 0.5rem;
   margin: 4rem 1rem;
-  padding: 2rem 6rem;
+  padding: 2rem 9rem;
   box-shadow: 0 0 15px rgb(18, 18, 18);
 }
 

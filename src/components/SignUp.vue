@@ -42,7 +42,7 @@
             required
           />
         </div>
-        <button class="button" type="submit">Sign Up</button>
+        <button class="button" type="submit" @click="click2()">Sign Up</button>
         <div class="haveAccount">
           Have an account?
           <PersonalRouter
@@ -101,6 +101,8 @@ const signUp = async () => {
   }
   errorMsg.value = "error";
 };
+
+let click2 = () => new Audio("src/sound/click2.mp3").play();
 </script>
 
 <style></style>
