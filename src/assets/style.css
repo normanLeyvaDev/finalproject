@@ -282,7 +282,7 @@ nav p {
   font-size: 19px;
   padding: 0;
 }
-
+/* 
 nav button {
   border: 0;
   background-color: var(--colorRed);
@@ -290,7 +290,7 @@ nav button {
   width: 5rem;
   height: 1.5rem;
   border-radius: 0.5rem;
-}
+} */
 
 .router-link-active {
   padding: 0;
@@ -452,10 +452,6 @@ input:checked + .deslizadora:before {
   font-size: 2rem;
 }
 
-.contenedor-todos-tasks {
-  /* padding: 1rem 7rem; */
-}
-
 .container-tasks {
   display: flex;
   flex-direction: column;
@@ -536,19 +532,27 @@ input:checked + .deslizadora:before {
   border: 0;
   background-color: #f72585;
   color: white;
-  width: 5rem;
   height: 1.5rem;
   border-radius: 0.5rem;
   margin: 4rem 1rem;
-  padding: 2rem 9rem;
+  padding: 2rem 3rem;
   box-shadow: 0 0 15px rgb(18, 18, 18);
 }
 
 footer {
-  padding: 3rem;
+  background: #000000;
+  width: 100%;
+  min-height: 5%;
+  display: flex;
   position: absolute;
+  margin: 30px 0 0 -10px;
+  padding: 10px;
+  color: white;
 }
 
+.footer-text {
+  font-size: 1rem;
+}
 /* Account View */
 
 /************************************ A PARTIR DE AQUÍ TABLET ***********/
@@ -557,40 +561,41 @@ footer {
   body {
     background-image: url(../images/WallpaperDog-17174300.jpg);
     background-repeat: no-repeat;
-    background-size: auto;
+    background-size: cover;
   }
 
   .contenedor-todo {
     margin: 10rem 5rem;
   }
+
+  .container {
+    margin: 6rem 2.5rem;
+  }
+
+  .container-tasks {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    align-content: center;
+    padding: 2rem 5rem;
+    background-color: white;
+    border-radius: 5%;
+    box-shadow: 0 0 15px rgb(18, 18, 18);
+    -webkit-mask-attachment: ;
+  }
+
+  .container-delete-edit {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    align-content: center;
+    justify-content: space-between;
+    padding: 1rem;
+    margin: 1rem;
+  }
 }
 
-.container {
-  margin: 6rem 2.5rem;
-}
-
-.container-tasks {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  align-items: center;
-  align-content: center;
-  padding: 2rem 5rem;
-  background-color: white;
-  border-radius: 5%;
-  box-shadow: 0 0 15px rgb(18, 18, 18);
-  -webkit-mask-attachment: ;
-}
-
-.container-delete-edit {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  align-content: center;
-  justify-content: space-between;
-  padding: 1rem;
-  margin: 1rem;
-}
 /* Sig
 
 /* SignIn Component */
@@ -619,7 +624,6 @@ footer {
     text-decoration: none !important;
     padding: 10px 10px !important;
     margin: 0 7px;
-    color: #e80707 !important;
     background-color: var(--ultramarine-blue) !important;
     border-radius: 30px !important;
   }

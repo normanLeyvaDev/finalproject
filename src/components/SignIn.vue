@@ -35,7 +35,7 @@
           </div>
 
           <div id="container">
-            <button class="button" @click="click2()">
+            <button class="btn-34" @click="click2()">
               <span class="circle" aria-hidden="true">
                 <span class="icon arrow"></span>
               </span>

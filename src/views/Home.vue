@@ -1,5 +1,5 @@
 <template>
-  <div class="">
+  <div class="main-page">
     <Nav />
 
     <div class="content">
@@ -17,6 +17,7 @@
       :task="task"
     />
   </div>
+
   <div>
     <Footer />
   </div>
